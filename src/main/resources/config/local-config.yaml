@@ -1,0 +1,13 @@
+http:
+  listner:
+    host: "localhost"
+    port: "8081"
+    path: "/travel/{serviceType}"
+    
+db:
+  oracle:
+    host: "10.0.0.56"
+    port: "1521"
+    sid: "XE"
+    userid: "system"
+    password: "admin"    
