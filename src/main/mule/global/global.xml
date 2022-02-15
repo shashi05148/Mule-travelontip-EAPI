@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="aef753fc-8fe1-405e-beb2-befff6cb769b" basePath="/travelontip-externalsystem">
 		<http:listener-connection host="${http.listner.host}" port="${http.listner.port}" />
 	</http:listener-config>
-	<configuration-properties doc:name="Configuration properties" doc:id="88d9fead-8a7e-443c-90ae-31c8323f9f9f" file="config\local-config.yaml" />
+	<configuration-properties doc:name="Configuration properties" doc:id="88d9fead-8a7e-443c-90ae-31c8323f9f9f" file="config/${MULE_ENV}-config.yaml" />
 	<db:config name="Database_Config" doc:name="Database Config" doc:id="d12eaf9e-0566-43cc-a02a-f3f90cb975f6" >
 		<db:oracle-connection host="${db.oracle.host}" port="${db.oracle.port}" user="${db.oracle.userid}" password="${db.oracle.password}" instance="${db.oracle.sid}" />
 	</db:config>

@@ -7,7 +7,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<flow name="travelontip-externalsystemFlow" doc:id="6556d1bf-5201-47df-a45b-5216ac1722d7" >
 		<http:listener doc:name="Listener" doc:id="12b78aef-6421-43cf-99ba-41f8f7a4fea6" config-ref="HTTP_Listener_config" path="${http.listner.path}">
-			<http:error-response statusCode="#[vars.statusCode as number]">
+			<http:error-response statusCode="#[vars.statusCode]">
 				<http:body ><![CDATA[#[vars.errorMessage default "Critical Error"]]]></http:body>
 			</http:error-response>
 		</http:listener>
