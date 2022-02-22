@@ -2,6 +2,7 @@ http:
   listner:
     host: "localhost"
     port: "8081"
+    base: "/travelonTip-eapi"
     path: "/travel/{serviceType}"
     
 db:
